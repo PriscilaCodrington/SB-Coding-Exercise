@@ -26,3 +26,5 @@ async function getNewsArray(newsIds){
 
     console.log(allNews);
   }
+
+  getNews();
