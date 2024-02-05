@@ -20,4 +20,9 @@ async function getNewsArray(newsIds){
     
     return news;
 }
-  
+  async function getNews(){
+    const newsIds = await getNewsIds();
+    const allNews = await getNewsArray(newsIds);
+
+    console.log(allNews);
+  }
