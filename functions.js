@@ -1,7 +1,7 @@
 const limit = 150;
 const limit2 = 30;
 
-async function getNewsIds(limit) {
+async function getNewsIds(limit= 30) {
     return fetch(`https://hacker-news.firebaseio.com/v0/newstories.json?limitToFirst=${limit}&orderBy="$key"`)
       .then(response => response.json())
   }
@@ -26,5 +26,7 @@ async function getNewsArray(newsIds){
 
     console.log(allNews);
   }
+
+  
 
   getNews();
