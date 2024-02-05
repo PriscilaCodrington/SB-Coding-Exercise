@@ -26,7 +26,24 @@ async function getNewsArray(newsIds){
 
     console.log(allNews);
   }
-
+  async function renderNewHtml(report) {
+    const container = document.querySelector('.container-grid');
+    const { title, score, descendants, id, by } = report
+  
+    container.innerHTML += `
+      <div class="card-body">
+          <h4 class="card-title">${title}</h4>
+          <p class="card-comments">${descendants} Comments</p>
+          <p class="card-points">${score} Comments</p>
+          <p class="card-order">${id} Comments</p>
+          <p class="card-user">Written by: ${by} Comments</p>
+      </div>`
+  }
+  async function renderNewsHtml(newsArray) {
+    for (const New of newsArray) {
+      renderNewHtml(New)
+   }
+ }
   
 
   getNews();
