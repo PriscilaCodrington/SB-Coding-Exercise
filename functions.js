@@ -8,5 +8,16 @@ async function getNewsIds(limit) {
 const getNewById = async (id) =>
        fetch(`https:hacker-news.firebaseio.com/v0/item/${id}.json`)
          .then(response => response.json())
- 
+
+
+async function getNewsArray(newsIds){
+    const news = [];
+
+    for(const newId of newsIds){
+        const notice = await getNewById(newId);
+        news.push(notice);
+    }
+    
+    return news;
+}
   
