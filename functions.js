@@ -1,8 +1,7 @@
-const limit = 150;
-const limit2 = 30;
+
 
 async function getNewsIds(limit= 30) {
-    return fetch(`https://hacker-news.firebaseio.com/v0/newstories.json?limitToFirst=${limit}&orderBy="$key"`)
+    return fetch(`https://hacker-news.firebaseio.com/v0/topstories.json?limitToFirst=${limit}&orderBy="$key"`)
       .then(response => response.json())
   }
 const getNewById = async (id) =>
@@ -25,6 +24,9 @@ async function getNewsArray(newsIds){
     const allNews = await getNewsArray(newsIds);
 
     console.log(allNews);
+    renderNewsHtml(allNews);
+    filterMoreThan5words(allNews);
+    filterLessThan5words(allNews);
   }
   async function renderNewHtml(report) {
     const container = document.querySelector('.container-grid');
@@ -45,5 +47,14 @@ async function getNewsArray(newsIds){
    }
  }
   
-
-  getNews();
+ async function filterMoreThan5words(newsArray) {
+    const filteredNews = newsArray.filter((news) => news.title.split(' ').length > 5).sort(newsArray.descendants);
+    console.log(filteredNews);
+   // renderNewsHtml(filteredNews);
+}
+async function filterLessThan5words(newsArray) {
+    const filteredNews = newsArray.filter((news)=> news.title.split(' ').length < 5).sort(newsArray.score);
+    console.log(filteredNews);
+   // renderNewsHtml(filteredNews);
+}
+ getNews();
