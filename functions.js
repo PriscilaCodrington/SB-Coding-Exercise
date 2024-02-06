@@ -48,12 +48,13 @@ async function getNewsArray(newsIds){
  }
   
  async function filterMoreThan5words(newsArray) {
-    const filteredNews = newsArray.filter((news) => news.title.split(' ').length > 5).sort(newsArray.descendants);
+    const filteredNews = newsArray.filter((news) => news.title.split(' ').length > 5);
     console.log(filteredNews);
    // renderNewsHtml(filteredNews);
 }
 async function filterLessThan5words(newsArray) {
-    const filteredNews = newsArray.filter((news)=> news.title.split(' ').length < 5).sort(newsArray.score);
+    const filteredNews = newsArray.filter((news)=> news.title.split(' ').length < 5);
+
     console.log(filteredNews);
    // renderNewsHtml(filteredNews);
 }
