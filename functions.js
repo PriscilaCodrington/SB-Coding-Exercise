@@ -49,13 +49,16 @@ async function getNewsArray(newsIds){
   
  async function filterMoreThan5words(newsArray) {
     const filteredNews = newsArray.filter((news) => news.title.split(' ').length > 5);
-    console.log(filteredNews);
-   // renderNewsHtml(filteredNews);
+    const sortedFilteredNews = filteredNews.sort((a, b) => b.descendants - a.descendants);
+    console.log(sortedFilteredNews);
+
+  
 }
 async function filterLessThan5words(newsArray) {
-    const filteredNews = newsArray.filter((news)=> news.title.split(' ').length < 5);
-
-    console.log(filteredNews);
-   // renderNewsHtml(filteredNews);
+    const filteredNews = newsArray.filter((news)=> news.title.split(' ').length <= 5);
+    const sortedFilteredNews = filteredNews.sort((a, b) => b.score - a.score);
+    console.log(sortedFilteredNews);
+  
 }
+
  getNews();
