@@ -1,7 +1,7 @@
 
 
 async function getNewsIds(limit= 30) {
-    return fetch(`https://hacker-news.firebaseio.com/v0/newstories.json?limitToFirst=${limit}&orderBy="$key"`)
+    return fetch(`https://hacker-news.firebaseio.com/v0/topstories.json?limitToFirst=${limit}&orderBy="$key"`)
       .then(response => response.json())
   }
 const getNewById = async (id) =>
@@ -31,15 +31,15 @@ async function getNewsArray(newsIds){
   }
   async function renderNewHtml(report) {
     const container = document.querySelector('.container-grid');
-    const { title, score, descendants, id, by } = report
+    const { title, score, descendants, id, by, url } = report
   
     container.innerHTML += `
       <div class="card-body">
-          <h4 class="card-title">${title}</h4>
+         <a href="${url}"> <h4 class="card-title">${title}</h4> </a>
           <p class="card-comments">${descendants} Comments</p>
-          <p class="card-points">${score} Comments</p>
-          <p class="card-order">${id} Comments</p>
-          <p class="card-user">Written by: ${by} Comments</p>
+          <p class="card-points">${score} Points</p>
+          <p class="card-order">ID: ${id}</p>
+          <p class="card-user">Written by: <b>${by}</b></p>
       </div>`
   }
   async function renderNewsHtml(newsArray) {
@@ -84,5 +84,4 @@ async function renderFilteredNews(filteredNews) {
   }
 }
 
-
- 
+getNews(); 

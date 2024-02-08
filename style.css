@@ -1,5 +1,5 @@
 body{
-    width: 70%;
+    width: 100%;
     display: grid;
     justify-content: center;
     margin: 0 auto;
@@ -9,10 +9,9 @@ body{
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
-    gap: 20px;
-    width: 70%;
+    gap: 5px;
     margin:20px auto;
-    padding-top:6px; 
+    padding-top:10px; 
 
 }
 .card-body{
@@ -22,11 +21,27 @@ body{
     margin: 15px;
     padding: 20px;
     border-radius: 10px;
-    border-bottom: 5px;
+    border: 1px solid #3636367c;
 
 }
 .card-body:hover{
     transition: 0.5s;
-    top: -10px;
     box-shadow: 0px 1px 4px 4px rgba(0, 0, 0, 0.315);
+}
+a, h4.card-title{
+    text-transform: capitalize;
+    text-decoration: none;
+    color: rgb(20, 20, 20);
+    font-size: 15px;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-weight: 700;
+    padding-left: 10px;
+    margin-top: 0;
+}
+.card-user, .card-comments, .card-points, .card-order{
+    text-transform: uppercase;
+    font-size: 12px;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-weight: 300;
+    padding-left: 10px;
 }
