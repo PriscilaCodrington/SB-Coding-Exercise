@@ -4,6 +4,7 @@ body{
     justify-content: center;
     margin: 0 auto;
 }
+
 .container-grid{
     width: 80vw;
     display: flex;
@@ -12,8 +13,8 @@ body{
     gap: 5px;
     margin:20px auto;
     padding-top:10px; 
-
 }
+
 .card-body{
     position: relative;
     background-color: #fcefe2;
@@ -22,12 +23,13 @@ body{
     padding: 20px;
     border-radius: 10px;
     border: 1px solid #3636367c;
-
 }
+
 .card-body:hover{
     transition: 0.5s;
     box-shadow: 0px 1px 4px 4px #00000050;
 }
+
 a, h4.card-title{
     text-transform: capitalize;
     text-decoration: none;
@@ -38,6 +40,7 @@ a, h4.card-title{
     padding-left: 10px;
     margin-top: 0;
 }
+
 .card-user, .card-comments, .card-points, .card-order{
     text-transform: uppercase;
     font-size: 12px;
@@ -45,26 +48,27 @@ a, h4.card-title{
     font-weight: 300;
     padding-left: 10px;
 }
+
 .btn-filterMorethan5, .btn-filterLessthan5{
     color: #FFF;
     border: 2px solid #96005c;
     margin: 0 auto;
-    width: 60%;
+    width: calc(50% - 20px);;
     background-color: #96005c;
     border-radius: 0px;
     padding: 18px 36px;
-    display: inline;
+    display: inline-block;
     font-family: 'Source Sans Pro', sans-serif;
     font-size: 14px;
     letter-spacing: 1px;
     cursor: pointer;
     margin-left: 20px ;
-
+    white-space: normal;
 }
+
 .btn-filterMorethan5:hover, .btn-filterLessthan5:hover{
     border: 2px solid #96005aa6;
     background-color: #960063a6;
-
 }
 
 .buttons{
