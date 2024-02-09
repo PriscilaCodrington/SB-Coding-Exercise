@@ -6,7 +6,7 @@ function getNewsIds(limit = 30) {
   ).then((response) => response.json());
 }
 function getNewById(id) {
-  return fetch(`https:hacker-news.firebaseio.com/v0/item/${id}.json`)
+  return fetch(`https://hacker-news.firebaseio.com/v0/item/${id}.json`)
   .then((response) => response.json());
 }
 function getNewsArray(newsIds) {
