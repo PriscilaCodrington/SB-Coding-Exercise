@@ -54,7 +54,8 @@ h4.card-title {
 }
 
 .btn-filterMorethan5,
-.btn-filterLessthan5 {
+.btn-filterLessthan5,
+.btn-home {
   color: #fff;
   border: 2px solid #96005c;
   margin: 0 auto;
@@ -72,7 +73,8 @@ h4.card-title {
 }
 
 .btn-filterMorethan5:hover,
-.btn-filterLessthan5:hover {
+.btn-filterLessthan5:hover,
+.btn-home:hover {
   border: 2px solid #96005aa6;
   background-color: #960063a6;
 }
