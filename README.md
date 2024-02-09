@@ -4,8 +4,8 @@
 
 This web crawler, built with Vanilla JavaScript, extracts information from the [Hacker News API](https://github.com/HackerNews/API) and filters the news articles based on their word count. It categorizes articles with:
 
--Titles with more than 5 words ordered by number of comments (DESC)
--Title with 5 words or less ordered by points (DESC)
+>Titles with more than 5 words ordered by number of comments (DESC)
+>Title with 5 words or less ordered by points (DESC)
 
 ## Problem and Solution:
 
