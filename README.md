@@ -14,9 +14,9 @@ Filtering an array of objects in JavaScript without external libraries, specific
 This web crawler uses the Hacker News API to fetch articles and filters them based on their word count of titles.
 
 Features:
-Fetches articles from the Hacker News API using fetch.
-Filters articles based on word count using sort and filter.
-Displays filtered articles in the browser.
++ Fetches articles from the Hacker News API using fetch.
++ Filters articles based on word count using sort and filter.
++ Displays filtered articles in the browser.
 
 ## Instalation
 1. Clone this repository: git clone https://github.com/PriscilaCodrington/SB-Coding-Exercise.
