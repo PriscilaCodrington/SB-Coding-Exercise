@@ -30,7 +30,7 @@ function renderNewHtml(report) {
 
   container.innerHTML += `
       <div class="card-body">
-         <a href="${url}"> <h4 class="card-title">${title}</h4> </a>
+         <a href="${url}" target="_blank"> <h4 class="card-title">${title}</h4> </a>
           <p class="card-comments">${descendants} Comments</p>
           <p class="card-points">${score} Points</p>
           <p class="card-order">ID: ${id}</p>
